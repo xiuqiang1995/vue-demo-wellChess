@@ -3,6 +3,8 @@
   <div>第 {{n}} 手</div>
   <div class="chess">
   <div class="row">
+    <!-- 监听Cell的点击事件 -->
+    <!-- 能不能不在每个Cell上绑定n，直接将最上面的n传给cell组件 -->
     <Cell @click="onClickCell(0,$event)" :n="n"/>
     <Cell @click="onClickCell(1,$event)" :n="n"/>
     <Cell @click="onClickCell(2,$event)" :n="n"/>

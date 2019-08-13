@@ -12,6 +12,7 @@
 
 <script>
 export default{
+  //接收App.vue传过来的n   :n="n"   bind和props用法
   props:["n"],
   data(){
     return{a:false,text:""}
@@ -24,7 +25,7 @@ export default{
       this.a =  true;
       //判断是 x 还是 o
       this.text = this.n %2 === 0?"x":"o";
-      //告诉外界 我被点了,并把x或o传出去
+      //告诉外界 我被点了,并把x或o传出去 App.vue中触发Cell的点击事件
       this.$emit("click",this.text);
   }
 }
